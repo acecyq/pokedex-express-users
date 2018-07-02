@@ -27,6 +27,9 @@ class Pokemon extends React.Component {
                 weight: {this.props.pokemon.weight}
               </li>
               <li className="pokemon-attribute">
+                user id: {this.props.pokemon.user_id}
+              </li>
+              <li className="pokemon-attribute">
                 candy: {this.props.pokemon.candy}
               </li>
               <li className="pokemon-attribute">

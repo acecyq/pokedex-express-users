@@ -1,24 +1,22 @@
-# Pokedex Express App (with Postgres SQL)
+#Pokedex Express App (with Postgres SQL)
 
 For this exercise, we'll upgrade from storing pokedex data in a plain JSON file to a fully fledged Postgres database. The end result we want is a CRUD app for pokemon with data saved into a database.
 
-## Getting Started
+##Getting Started
+1. Fork and clone this repository to your computer
+2. Run npm install to install dependencies
+3. Create a new Postgres database by running createdb pokemons -U <your_username>
+4. Run psql -U <your_username> -d pokemons -a -f tables.sql to create a pokemon table in the database
+5. Seed data into the newly created pokemon table by running node seed.js( Note this will populate your DB with the contents of pokedex.json)
+6. Look in the starter file called index.js, run nodemon to start local server on port 3000
+7. Open localhost:3000 on your browser and see the home page
 
-1.  Fork and clone this repository to your computer
-2.  Run `npm install` to install dependencies
-3.  Create a new Postgres database by running `createdb pokemons -U <your_username>`
-4.  Run `psql -U <your_username> -d pokemons -a -f tables.sql` to create a `pokemon` table in the database
-5.  Seed data into the newly created `pokemon` table by running `node seed.js`( Note this will populate your DB with the contents of pokedex.json)
-6.  Look in the starter file called `index.js`, run `nodemon` to start local server on port 3000
-7.  Open `localhost:3000` on your browser and see the home page
-
-## Deliverables
-
+##Deliverables
 The deliverable is an app that has CRUD functionality on pokemons that can be associated with users. Some example code from the previous version of the exercise has been provided for you to build on, although you may extend your own code from the previous exercise if you wish to do so.
 
-* DELETE `/pokemon/:id` should delete the entry of the pokemon with the specified ID, and should redirect to the home page `/`
+* DELETE /pokemon/:id should delete the entry of the pokemon with the specified ID, and should redirect to the home page /
 
-* Create the relevant `tables.sql` file to create the appropriate table for your database
+* Create the relevant tables.sql file to create the appropriate table for your database
 
 * Create new routes for user-creation
 
@@ -33,8 +31,7 @@ The deliverable is an app that has CRUD functionality on pokemons that can be as
 * (FURTHER) When a user is logged in, the home page should show a separate table containing only pokemon associated with the user.
 
 ## Useful SQL commands
-
-Note the proceeding commands should be run in a `psql` session on Terminal.
+Note the proceeding commands should be run in a psql session on Terminal.
 
 View all the data in a table:
 ```sql
